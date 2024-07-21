@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+.filter {
+  transition: filter 0.3s ease;
+}
+.filter:hover {
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+.box-shadow {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.gradient-background {
+  background: linear-gradient(to bottom, #fff 0%, #f2e4c1 50%, #658598 100%);
+}
+.overlay-transition {
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.bounce {
+  animation: bounce 2s 0.3s ease forwards;
+}
+.modal-container {
+  transform: translateY(100%);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  z-index: 10000;
+  animation: grow 0.3s ease forwards;
+}
+@keyframes grow {
+  100% {
+    transform: translateY(0%);
+  }
+}
+.scrollbar{
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
